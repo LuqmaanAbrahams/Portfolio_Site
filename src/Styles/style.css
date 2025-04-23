@@ -1,10 +1,12 @@
 /* Default Styles for stuff */
+
 html {
     background-color: #051923;
 }
 
 body{
     font-family: 'Jaro', sans-serif !important;
+    color: #ffffff !important;
 }
 
 /* Chnages to boostrap styles */
@@ -13,4 +15,42 @@ body{
     padding: 0 !important;
     margin:0 !important;
     height: 60px !important;
-}   
+} 
+
+.button_custom{
+    --background-color: #051923;
+    --border-color: #00A6FB;
+   position: relative;
+   display: inline-grid;
+   margin-right: 10vh;
+   border: 0;
+   padding-right: 2rem;
+   background: var(--background-color);
+   clip-path: polygon(0% 0%,100% 0%,5em 100%,0% 100%);
+}
+
+.button_custom::before,
+.button_custom::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.button_custom::before{
+    background-color: var(--border-color);
+    z-index: -2;
+    
+}
+
+.button_custom::after{
+    background-color:var(--background-color);
+    z-index: -2;
+    clip-path: polygon(
+    .1em .1em,
+
+    calc(100% - .15em) .1em,
+    
+    4.95em calc(100% - .1em),
+    
+    .1em calc(100% - .1em));
+}
