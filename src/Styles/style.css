@@ -1,0 +1,16 @@
+/* Default Styles for stuff */
+html {
+    background-color: #051923;
+}
+
+body{
+    font-family: 'Jaro', sans-serif !important;
+}
+
+/* Chnages to boostrap styles */
+.navbar{
+    background-color: #002638 !important;
+    padding: 0 !important;
+    margin:0 !important;
+    height: 60px !important;
+}   
