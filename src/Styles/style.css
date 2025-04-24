@@ -14,12 +14,16 @@ body{
     background-color: #002638 !important;
     padding: 0 !important;
     margin:0 !important;
-    height: 60px !important;
+    height:3em !important;
 } 
 
+
+/* Custom Button Styling  */
 .button_custom{
     --background-color: #051923;
     --border-color: #00A6FB;
+    --hover-color: #00A6FB;
+    
    position: relative;
    display: inline-grid;
    margin-right: 10vh;
@@ -27,6 +31,11 @@ body{
    padding-right: 2rem;
    background: var(--background-color);
    clip-path: polygon(0% 0%,100% 0%,5em 100%,0% 100%);
+   transition: color 0.2s ease-in-out;
+}
+
+.button_custom:hover{
+    color: var(--hover-color);
 }
 
 .button_custom::before,
@@ -37,13 +46,13 @@ body{
 }
 
 .button_custom::before{
-    background-color: var(--border-color);
+    background: var(--border-color);
     z-index: -2;
     
 }
 
 .button_custom::after{
-    background-color:var(--background-color);
+    background:var(--background-color);
     z-index: -2;
     clip-path: polygon(
     .1em .1em,
