@@ -13,13 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-sm" data-bs-theme="dark">
+<body >
+    <nav class="navbar navbar-expand-sm sticky-top" data-bs-theme="dark">
         <a class="navbar-brand position-absolute mt-3 ms-3" href="#">Luqmaan <p style="color: #0582CA; margin-top: -10px; " class="ms-4">Abrahams_</p></a>
         <div class="container-fluid justify-content-center">
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+                    <a class="nav-link" href="#Home">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#About">About</a>
@@ -36,10 +36,15 @@
             Contact_
         </button>
     </nav>
-
-    <div class="container">
-        <section id="Home">
-
+    <div class="container-flex">
+        <section id="Home" class="home_section">
+            <div class="container">
+                <div class="home_content container-flex">
+                    <p style="font-size: 25px;"> {{home_message_top_pt1}} <br/> {{home_message_top_pt2}}<span style="color:#0582CA">.</span></p>
+                    <p style="font-size: 25px;"> {{home_message_bottom_pt1}}</p>
+                    <h1 style="color:#0582CA">{{home_message_bottom_pt2}}</h1>
+                </div>
+            </div>      
         </section>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -50,10 +55,13 @@
         let app = Vue.createApp({
             data() {
                 return {
-
+                    home_message_top_pt1: "Hello, I'm",
+                    home_message_top_pt2: "Luqmaan Abrahams",
+                    home_message_bottom_pt1: "I am a",
+                    home_message_bottom_pt2: "Software Developer",
                 }
             }
-        })
+        }).mount('#Home');
 
     </script>
 
