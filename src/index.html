@@ -13,9 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
 </head>
 
-<body >
+<body>
     <nav class="navbar navbar-expand-sm sticky-top" data-bs-theme="dark">
-        <a class="navbar-brand position-absolute mt-3 ms-3" href="#">Luqmaan <p style="color: #0582CA; margin-top: -10px; " class="ms-4">Abrahams_</p></a>
+        <a class="navbar-brand position-absolute mt-3 ms-3" href="#">Luqmaan <p
+                style="color: #0582CA; margin-top: -10px; " class="ms-4">Abrahams_</p></a>
         <div class="container-fluid justify-content-center">
             <ul class="navbar-nav ">
                 <li class="nav-item">
@@ -25,26 +26,58 @@
                     <a class="nav-link" href="#About">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Projects">Projects</a>
+                    <a class="nav-link" href="#Expertise">Expertise</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Contact">Contact</a>
+                    <a class="nav-link" href="#Portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    
                 </li>
             </ul>
         </div>
+        <!-- Add this buutton into the nav-items then position -->
         <button class="button_custom">
             Contact_
         </button>
     </nav>
     <div class="container-flex">
+        <!--Home Section Start-->
         <section id="Home" class="home_section">
             <div class="container">
                 <div class="home_content container-flex">
-                    <p style="font-size: 25px;"> {{home_message_top_pt1}} <br/> {{home_message_top_pt2}}<span style="color:#0582CA">.</span></p>
+                    <p style="font-size: 25px;"> {{home_message_top_pt1}} <br /> {{home_message_top_pt2}}<span
+                            style="color:#0582CA">.</span></p>
                     <p style="font-size: 25px;"> {{home_message_bottom_pt1}}</p>
                     <h1 style="color:#0582CA">{{home_message_bottom_pt2}}</h1>
                 </div>
-            </div>      
+            </div>
+        </section>
+        <!--About Section Start-->
+        <section id="About" class="about_section">
+
+            <div class="divider">
+                <div class="container">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p id="about_header" class="divider_text text-center mb-0 me-2">About</p>
+                        <div id="arrow_icon" class=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-flex text-center">
+                <div class="row">
+                    <div id="photo" class="col">
+                        <img class="img-fluid pt-5 img_sized" src="../assets/myProfilePic-cropped.jpg"
+                            alt="Luqmaan Image">
+                    </div>
+                    <div id="about_text" class="col  align-content-center">
+                        <h1>{{about_header_pt1}} <span style="color:#0582CA">{{about_header_pt2}}</span></h1>
+                        <p class="text-start about_content">{{about_text_pt1}}</p>
+                        <p class="text-start about_content">{{about_text_pt2}}</p>
+                        <p class="text-start about_content">{{about_text_pt2}}</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -59,10 +92,15 @@
                     home_message_top_pt2: "Luqmaan Abrahams",
                     home_message_bottom_pt1: "I am a",
                     home_message_bottom_pt2: "Software Developer",
+
+                    about_header_pt1: "A Little About",
+                    about_header_pt2: "Me",
+                    about_text_pt1: "I am a passionate developer who specializes in both software applications development and website development. I graduated with distinction from Monash University South Africa (IIEMSA) with a bachelor's degree in Computer and Information Sciences, focusing on applications development.",
+                    about_text_pt2: "I’ve worked on numerous projects—both professionally and in my free time—to expand my knowledge and sharpen my skills. I am fluent in many programming languages but have primarily focused on JavaScript, Java, and C#.",
+                    about_text_pt3: "I take my work seriously, but I also believe it doesn’t hurt to lighten up sometimes. So here’s a joke for you: Life is like coding—if it doesn’t work, delete everything and start over. (Just kidding… mostly.)",
                 }
             }
-        }).mount('#Home');
-
+        }).mount('body');
     </script>
 
 </body>
