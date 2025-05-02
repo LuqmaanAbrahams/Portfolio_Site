@@ -11,6 +11,10 @@ body{
     min-height: 100vh;
 }
 
+.spacer_div{
+    height: 20vh;
+}
+
 /* Chnages to boostrap styles */
 .navbar{
     background-color: #002638 !important;
@@ -173,4 +177,16 @@ body{
 .about_content{
    padding-left: 20vh;
    padding-right: 20vh;
+}
+/*---------------------------*/
+/* Expertise Section Styles */
+.bgicon{
+    width: 216px;
+    height: 217px;
+    clip-path: polygon(20% 0%,100% 1%,100% 80%,80% 100%,0% 100%,0% 20%);
+}
+
+.image_resize{
+    width: 50% !important;
+    height: 50% !important;  
 }
