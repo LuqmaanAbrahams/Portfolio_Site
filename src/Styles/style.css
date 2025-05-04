@@ -190,3 +190,8 @@ body{
     width: 50% !important;
     height: 50% !important;  
 }
+/*---------------------------*/
+/* Portfolio Section Styles */
+.card{
+    width: 40vh
+}
