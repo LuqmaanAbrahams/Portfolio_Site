@@ -130,7 +130,7 @@
 
                 <div class="spacer_div"></div>
 
-                <div class="row text-start">
+                <div class="row text-center">
                     <div class="col">
                         <div class="bgicon"></div>
                     </div>
@@ -166,63 +166,63 @@
         </section>
         <div class="spacer_div"></div>
         <!--Portfolio Section Start-->
-        <!-- <section id="Portfolio" >
+        <section id="Portfolio" >
             <div class="container justify-content-center">
                 <h1 class="text-center">Portfolio<span style="color:#0582CA">_</span></h1>
-                <div class="row mt-5">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card" style="background-color: #006494;" >
-                            <div class="card-body">
-                                <h6 class="card-title">Weather App</h6>
-                                <p class="card-text" style="font-size: 15px;">A web application that makes use of an API to display the
-                                     temperatures and weather conditions of the chosen city. Made using basic HTML, CSS and JavaScript.</div>
-                            </div>
-                            </div>
+                <div class="row">
+                    <div class="col me-5 text-center project_card" style="background: #006494;">
+                        <div class="mt-3" style="font-size: 30px;"><span style="color: #00A6FB ;">//</span>Weather App</div>
+                        <div style="font-size: 20px;" class="card-text mt-5">{{project_text1}}</div>
+                        <button id="weather_btn" class="view_button" >View_</button>
                     </div>
-
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card" style="background-color: #006494;" >
-                            <div class="card-body">
-                                <h6 class="card-title">Weather App</h6>
-                                <p class="card-text" style="font-size: 15px;">A web application that makes use of an API to display the
-                                     temperatures and weather conditions of the chosen city. Made using basic HTML, CSS and JavaScript.</div>
-                            </div>
-                            </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card" style="background-color: #006494;" >
-                            <div class="card-body">
-                                <h6 class="card-title">Weather App</h6>
-                                <p class="card-text" style="font-size: 15px;">A web application that makes use of an API to display the
-                                     temperatures and weather conditions of the chosen city. Made using basic HTML, CSS and JavaScript.</div>
-                            </div>
-                            </div>
+                    <div class="col  project_card "></div>
+                    <div class="col text-center me-5 project_card" style="background: #006494;">
+                        <div class="mt-3" style="font-size: 30px;"><span style="color: #00A6FB ;">
+                            //</span>Sunshine Sparkle<p>Website</p></div>
+                        <div style="font-size: 20px;" class="card-text">{{project_text2}}</div>
+                        <button id="sunshine_btn" class="view_button">View_</button>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+        <div class="spacer_div"></div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
-        let app = Vue.createApp({
+        let home = Vue.createApp({
             data() {
                 return {
                     home_message_top_pt1: "Hello, I'm",
                     home_message_top_pt2: "Luqmaan Abrahams",
                     home_message_bottom_pt1: "I am a",
                     home_message_bottom_pt2: "Software Developer",
+                }
+            }
+        }).mount('#Home');
 
+        let about = Vue.createApp({
+            data() {
+                return {
                     about_header_pt1: "A Little About",
                     about_header_pt2: "Me",
                     about_text_pt1: "I am a passionate developer who specializes in both software applications development and website development. I graduated with distinction from Monash University South Africa (IIEMSA) with a bachelor's degree in Computer and Information Sciences, focusing on applications development.",
                     about_text_pt2: "I’ve worked on numerous projects—both professionally and in my free time—to expand my knowledge and sharpen my skills. I am fluent in many programming languages but have primarily focused on JavaScript, Java, and C#.",
                     about_text_pt3: "I take my work seriously, but I also believe it doesn’t hurt to lighten up sometimes. So here’s a joke for you: Life is like coding—if it doesn’t work, delete everything and start over. (Just kidding… mostly.)",
-                }
+              }
             }
-        }).mount('body');
+        }).mount('#About');
+
+        let portfolio = Vue.createApp({
+            data() {
+                return {
+                   project_text1: "A web application that makes use of an API to display the temperatures and weather conditions of the chosen city. Made using basic HTML, CSS and JavaScript.",
+                   project_text2: "A website  built to showcase a solar panel cleaning business. The business uses a subscription based service to deliver their services based on the type of subscription. Made Using HTML, CSS , Bootstrap CSS and Javascript"
+              }
+            }
+        }).mount('#Portfolio');
     </script>
 
 </body>
