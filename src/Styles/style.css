@@ -251,3 +251,57 @@ body{
 }
 
 /*---------------------------*/
+/* Footer Section Styles */
+.divider_bar{
+    width: 80%;
+    height: 2px;
+    background-color: #00A6FB;
+}
+
+.footer_btn{
+    --background-color: #006494;
+    --border-color: #00A6FB;
+    --hover-color: #00A6FB;
+    width: 98px;
+    height: 25px;
+    color:white;
+   position: relative;
+   display: inline-grid;
+   margin-right: 5vh;
+   border: 0;
+   padding-right: 2rem;
+   background: var(--background-color);
+   clip-path: polygon(0% 0%,100% 0%,calc(100% - 0.8em) 100%,0% 100%);
+   transition: color 0.2s ease-in-out;
+}
+
+.footer_btn:hover{
+    color: var(--hover-color);
+}
+
+.footer_btn::before,
+.footer_btn::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.footer_btn::before{
+    background: var(--border-color);
+    z-index: -2;
+    
+}
+
+.footer_btn::after{
+    background:var(--background-color);
+    z-index: -2;
+    clip-path: polygon(
+    .1em .1em,
+
+    calc(100% - .15em) .1em,
+    
+    5.3em calc(100% - .1em),
+    
+    .1em calc(100% - .1em));
+    transition: color 0.2s ease-in-out;
+}
