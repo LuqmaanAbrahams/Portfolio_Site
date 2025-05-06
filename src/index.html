@@ -37,8 +37,8 @@
             </ul>
         </div>
         <!-- Add this buutton into the nav-items then position -->
-        <button id="contact_btn" class="button_custom">
-            Contact_
+        <button id="contact_btn" class="footer_btn">
+            Contact...
         </button>
     </nav>
     <div class="container-flex">
@@ -226,7 +226,7 @@
         </section>
         <div id="contact_modal" class="mymodal">
             <div id="modal_content" class="modal_container position-absolute top-50 start-50 translate-middle">
-                <form class="modal_form d-flex flex-column align-items-start ms-5" method="post" action="">
+                <form class="modal_form d-flex flex-column align-items-start ms-5" method="post" action="server.js">
                     <div class="mb-3">
                         <label for="txt_fullname" class="form-label">Fullname</label>
                         <input type="text" class="form-control" id="txt_fullname" aria-describedby="nameHelp" required>
@@ -235,20 +235,20 @@
                     <div class="mb-3">
                         <label for="txt_email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="txt_email" aria-describedby="emailHelp" required>
-                        <div id="nameHelp" class="form-text " style="color: #D48420;">Please enter a proper Email. Do not leave this empty</div>
+                        <div id="emailHelp" class="form-text " style="color: #D48420;">Please enter a proper Email. Do not leave this empty</div>
                     </div>
                     <div class="mb-3">
                         <label for="txt_subject" class="form-label">Subject (Optional)</label>
                         <input type="text" class="form-control" id="txt_subject">
-                        <div id="nameHelp" class="form-text hidden" style="color: #D48420;"></div>
+                        <div id="subjectHelp" class="form-text hidden" style="color: #D48420;"></div>
                     </div>
                     <div class="mb-3">
                         <label for="txt_message" class="form-label">Message (Optional)</label>
                         <textarea type="text" class="form-control" id="txt_message">
                         </textarea>
-                        <div id="nameHelp" class="form-text hidden" style="color: #D48420;"></div>
+                        <div id="messageHelp" class="form-text hidden" style="color: #D48420;"></div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button id="submit_btn" class="footer_btn" style="color:white" type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -258,7 +258,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-    <script src="Script/script.js"></script>
+    <script src="Script/Interactive.js"></script>
     <script>
         let home = Vue.createApp({
             data() {
