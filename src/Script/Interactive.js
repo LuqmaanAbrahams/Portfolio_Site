@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
            const message = message_input.value.trim();
 
            //basic form validation
-              if (!name || !email || !subject || !message) {
-                alert("All fields are required.");
+              if (!name || !email) {
+                alert("Name and Email fields must not be empty.");
                 return;
               }
 

@@ -11,17 +11,32 @@ body{
     min-height: 100vh;
 }
 
+section{
+    scroll-margin-top: 100px;
+}
+
 .spacer_div{
     height: 20vh;
 }
 
-/* Chnages to boostrap styles */
+/* Changes to boostrap styles */
 .navbar{
     background-color: #002638 !important;
-    padding: 0 !important;
-    margin:0 !important;
-    height:3em !important;
-} 
+    padding-top: 0.3rem ; /* Reduced top padding */
+    padding-bottom: 0.3rem
+}
+
+.nav-item{
+    padding-left: 0 !important;
+}
+
+.navbar-toggler{
+    border: none !important;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
 
 
 /* Custom Button Styling  */
@@ -127,7 +142,7 @@ body{
     overflow: hidden;
 }
 
-.divider{
+.divider_about{
     width:100%;
     height: 5vh;
     background-color: #00A6FB;
@@ -269,7 +284,6 @@ body{
     color:white;
    position: relative;
    display: inline-grid;
-   margin-right: 5vh;
    border: 0;
    padding-right: 2rem;
    background: var(--background-color);
@@ -320,6 +334,7 @@ body{
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     visibility: hidden;
+    z-index: 2000;;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
@@ -346,4 +361,8 @@ body{
 .mymodal.show .modal_container {
     transform: scale(1);
     opacity: 1;
+}
+
+/* Responsivenes */
+@media (max-width: 425px) {
 }
