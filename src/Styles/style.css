@@ -181,7 +181,15 @@ section{
 .bgicon{
     width: 216px;
     height: 217px;
-    clip-path: polygon(2em 0%,100% 0%,100% calc(100% - 2em),calc(100% - 2em) 100%,0% 100%,0% 2em);
+    /* clip-path: polygon(2em 0%,100% 0%,100% calc(100% - 2em),calc(100% - 2em) 100%,0% 100%,0% 2em); */
+   clip-path: polygon(
+        32px 0px,
+        216px 0px,
+        216px 185px,
+        184px 217px,
+        0px 217px,
+        0px 32px
+);
 }
 
 .image_resize{
@@ -375,6 +383,11 @@ section{
         /* about Section*/
         #about_text{
             font-size: 11px;
+        }
+
+        /* expertise Section*/
+        #skill_spacer{
+            display:none;
         }
 }
 
