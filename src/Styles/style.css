@@ -199,9 +199,16 @@ section{
 /*---------------------------*/
 /* Portfolio Section Styles */
 .project_card{
-    width: 50% !important;
-    height: 350px;
-    clip-path: polygon(5em 0%,100% 0%,100% calc(100% - 5em),calc(100% - 5em) 100%,0% 100%,0% 5em);
+    width: 350px !important;
+    height: 350px !important;
+     clip-path: polygon(
+        80px 0px,
+        350px 0px,
+        350px 270px,
+        270px 350px,
+        0px 350px,
+        0px 80px
+        );
 }
 
 .view_button{
