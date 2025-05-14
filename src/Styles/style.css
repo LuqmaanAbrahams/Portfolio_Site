@@ -353,8 +353,8 @@ section{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 80%;
+    width: 450px;
+    height: auto;
     background-color: #003554;
     padding: 2rem;
     clip-path: polygon(5em 0%,100% 0%,100% calc(100% - 5em),calc(100% - 5em) 100%,0% 100%,0% 5em);
