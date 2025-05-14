@@ -19,6 +19,16 @@ section{
     height: 20vh;
 }
 
+#footer_menu a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+#footer_menu a:hover {
+    color: #00A6FB !important;
+    text-decoration: none !important;
+}
+
 /* Changes to boostrap styles */
 .navbar{
     background-color: #002638 !important;
@@ -396,6 +406,8 @@ section{
         #skill_spacer{
             display:none;
         }
+
+        /* footer Section*/
 }
 
 @media (min-width: 1440px) {
