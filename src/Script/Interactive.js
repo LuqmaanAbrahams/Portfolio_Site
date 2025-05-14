@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Your code here will execute once the DOM is fully loaded
+    //modal functionality
         let modal = document.getElementById("contact_modal");
         let contact_btn = document.getElementById("contact_btn");
         let ft_contact_btn = document.getElementById("ft_contact_btn");
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Form submission
+        // Modal Form submission
         const submit_btn = document.getElementById("submit_btn");
         submit_btn.addEventListener("click", async (e) => {
            e.preventDefault();
@@ -75,6 +76,37 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("An error occurred. Please try again later.");
             }
         })
-        
+
+        //add Home Page text typing effect
+        const txtArray = ["Software Developer", "Website Developer"];
+        let txtIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const speed = 100;
+        const pause = 1500;
+
+        function typeWriter() {
+            const currentTxt = txtArray[txtIndex];
+            const displayElement = document.getElementById("title_tag");
+
+            if (isDeleting) {
+            displayElement.innerHTML = currentTxt.substring(0, charIndex--);
+            } else {
+            displayElement.innerHTML = currentTxt.substring(0, charIndex++);
+            }
+
+            if (!isDeleting && charIndex === (currentTxt.length +1)) {
+            isDeleting = true;
+            setTimeout(typeWriter, pause);
+            } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            txtIndex = (txtIndex + 1) % txtArray.length;
+            setTimeout(typeWriter, speed);
+            } else {
+            setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
 
 })
